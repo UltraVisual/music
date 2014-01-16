@@ -1,15 +1,20 @@
 {
-  "name": "Music",
-  "minimum_chrome_version": "24.0.1307.0",
-  "description": "Launcher for Google Music and other services",
-  "version": "0.1",
-  "app": {
-    "background": {
-      "scripts": ["main.js"]
+    "name": "Music",
+    "minimum_chrome_version": "24.0.1307.0",
+    "description": "Launcher for Google Music and other services",
+    "version": "0.2",
+    "manifest_version": 2,
+    "app": {
+        "background": {
+            "scripts": ["main.js"]
+        }
+    },
+    "permissions": [
+        "webview"
+    ],
+    "icons": {
+        "16": "icons/icon-16.png",
+        "128": "icons/icon-128.png",
+        "256": "icons/icon-256.png"
     }
-  },
-  "permissions": [
-    "webview"
-  ],
-  "icons": { "16": "icons/icon-16.png", "128": "icons/icon-128.png", "256": "icons/icon-256.png" }
 }

@@ -10,7 +10,7 @@ function runApp(){
 	chrome.app.window.create('window.html', {
 		id:'music-app',
     	'bounds': {
-      		'width': 972,
+      		'width': 1020,
       		'height': 600
     	}
   	});
