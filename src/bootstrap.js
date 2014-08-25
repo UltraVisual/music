@@ -4,7 +4,14 @@ var webView = document.querySelector('#webView');
 var popupContainer = undefined;
 var newWebView = undefined;
 
-goButton.addEventListener('click', function () {
+window.onresize = function(){
+    handleResize()
+};
+
+handleResize();
+
+goButton.addEventListener('click', function (e) {
+    console.log('Shane', e)
     webView.src = selection.value;
 });
 
@@ -12,6 +19,11 @@ goButton.addEventListener('click', function () {
 
 function handleExit(e) {
 //    console.log(e, e.type);
+}
+
+function handleResize(){
+    webView.style.width = window.innerWidth + 'px';
+    webView.style.height = window.innerHeight - 50 +'px';
 }
 
 function handleLoadStart(e) {
@@ -68,8 +80,8 @@ function loadNewWindow(e) {
     popupContainer.appendChild(newWebView);
     document.body.appendChild(popupContainer);
     e.window.attach(newWebView);
-    webView.addEventListener('loadredirect', onRedirectAfterLogin)
-    addListeners(newWebView)
+    webView.addEventListener('loadredirect', onRedirectAfterLogin);
+    addListeners(newWebView);
 }
 
 addListeners(webView);
@@ -83,6 +95,8 @@ function addListeners(view) {
     view.addEventListener('loadredirect', handleLoadRedirect);
     view.addEventListener('loadcommit', handleLoadCommit);
 }
+
+
 
 function removeListeners(view) {
     view.removeEventListener('exit', handleExit);
