@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Music</title>
-    <style type="text/css">
-        #webView {
-            width: 100%;
-            height: 565px;
-        }
+	<title>Music</title>
+	<style type="text/css">
+		#webView {
+			width: 100%;
+			height: 565px;
+		}
 
-        select{
-            -webkit-appearance: none;
-        }
+		select {
+			-webkit-appearance: none;
+		}
 
-        select, button {
-            padding: 5px;
-            background-color: #E0E0E0;
-            border: 1px solid grey;
-            border-radius: 0;
-        }
+		select, button {
+			padding: 5px;
+			background-color: #E0E0E0;
+			border: 1px solid grey;
+			border-radius: 0;
+		}
 
-        button {
-            padding: 6px;
-        }
+		button {
+			padding: 6px;
+		}
 
-        .modal {
-            position: fixed;
-            z-index: 100;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.72);
-        }
+		.modal {
+			position: fixed;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.72);
+		}
 
-        .popup-webview {
-            position: fixed;
-            z-index: 101;
-            top: 33%;
-            left: 25%;
-            height: 300px;
-            width: 500px;
-        }
+		.popup-webview {
+			position: fixed;
+			z-index: 101;
+			top: 33%;
+			left: 25%;
+			height: 300px;
+			width: 500px;
+		}
 
-    </style>
+	</style>
 </head>
 <body>
 <select id="choice">
-    <option value="https://play.google.com/music/listen">Google</option>
-    <option value="http://grooveshark.com/">Grooveshark</option>
-    <option value="https://soundcloud.com/">SoundCloud</option>
-    <option value="https://play.spotify.com/discover">Spotify</option>
-    <option value="http://www.last.fm/">Last.fm</option>
+	<option value="https://play.google.com/music/listen">Google</option>
+	<option value="http://grooveshark.com/">Grooveshark</option>
+	<option value="https://soundcloud.com/">SoundCloud</option>
+	<option value="https://play.spotify.com/discover">Spotify</option>
+	<option value="http://www.last.fm/">Last.fm</option>
 </select>
 <button id="go-button">Go</button>
 <webview id="webView" src="https://play.google.com/music/listen" partition="persist:uv-music"></webview>
