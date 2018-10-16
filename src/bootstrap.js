@@ -11,7 +11,6 @@ window.onresize = function () {
 handleResize();
 
 goButton.addEventListener('click', function (e) {
-	console.log('Shane', e)
 	webView.src = selection.value;
 });
 

@@ -9,7 +9,7 @@ chrome.app.runtime.onRestarted.addListener(function () {
 function runApp() {
 	chrome.app.window.create('window.html', {
 		id: 'music-app',
-		'bounds': {
+		bounds: {
 			'width': 1020,
 			'height': 600
 		}

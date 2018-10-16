@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Music</title>
 	<style type="text/css">
@@ -12,7 +13,8 @@
 			-webkit-appearance: none;
 		}
 
-		select, button {
+		select,
+		button {
 			padding: 5px;
 			background-color: #E0E0E0;
 			border: 1px solid grey;
@@ -41,19 +43,20 @@
 			height: 300px;
 			width: 500px;
 		}
-
 	</style>
 </head>
+
 <body>
-<select id="choice">
-	<option value="https://play.google.com/music/listen">Google</option>
-	<option value="http://grooveshark.com/">Grooveshark</option>
-	<option value="https://soundcloud.com/">SoundCloud</option>
-	<option value="https://play.spotify.com/discover">Spotify</option>
-	<option value="http://www.last.fm/">Last.fm</option>
-</select>
-<button id="go-button">Go</button>
-<webview id="webView" src="https://play.google.com/music/listen" partition="persist:uv-music"></webview>
+	<select id="choice">
+		<option value="https://play.google.com/music/listen">Google</option>
+		<option value="https://www.mixcloud.com/">Mixcloud</option>
+		<option value="https://soundcloud.com/">SoundCloud</option>
+		<option value="https://play.spotify.com/browse">Spotify</option>
+		<option value="http://www.last.fm/">Last.fm</option>
+	</select>
+	<button id="go-button">Go</button>
+	<webview id="webView" src="https://play.google.com/music/listen" partition="persist:uv-music"></webview>
 </body>
 <script type="text/javascript" src="/bootstrap.js"></script>
+
 </html>
